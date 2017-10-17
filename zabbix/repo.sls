@@ -45,7 +45,7 @@
 
 
 {%- elif salt['grains.get']('os_family') == 'RedHat' and
-         salt['grains.get']('osmajorrelease')|int >= '6' %}
+         salt['grains.get']('osmajorrelease')|int >= 6 %}
 {{ id_prefix }}_repo:
   pkgrepo.managed:
     - name: zabbix
